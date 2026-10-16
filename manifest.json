@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Plex Volume Boost",
+  "version": "1.0.0",
+  "description": "Boost Plex web player volume above 100%. No ads, no tracking.",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Plex Volume Boost",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://app.plex.tv/*"],
+      "js": ["content.js"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ]
+}
